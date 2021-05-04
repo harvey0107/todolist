@@ -10,14 +10,18 @@ class Todolist extends Component{
   }
   
   handleInputChange(event){
-    console.log(event.target.value)
+    this.setState({
+      input: event.target.value
+    })
   }
 
   render() {
     return (
       <Fragment>
       <div>
-        <input value={this.state.input} onChange={this.handleInputChange}
+        <input value={this.state.input} 
+          onChange={this.handleInputChange.bind(this)}
+          placeholder='Enter Your Event'
         />
         <button>Submit</button></div>
         <ul>
