@@ -1,14 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component  } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hello Harvey</h1>
-      </header>
-    </div>
-  );
+class Todolist extends Component{
+  render() {
+    return (
+      <div>Todolist</div>
+    )
+  }
 }
-
-export default App;
+export default Todolist;
