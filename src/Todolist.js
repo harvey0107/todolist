@@ -22,9 +22,12 @@ class Todolist extends Component{
     })
   }
 
-  onItemDelete(){
-    this.setState({
-      
+  onItemDelete(index){
+    const listCopy = [...this.state.list];
+    listCopy.splice(index, 1, )
+    
+    this.setState({ 
+      list: listCopy
     })
   }
 
