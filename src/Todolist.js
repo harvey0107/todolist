@@ -9,6 +9,10 @@ class Todolist extends Component{
     }
   }
   
+  handleInputChange(event){
+    console.log(event.target.value)
+  }
+
   render() {
     return (
       <Fragment>
