@@ -3,7 +3,12 @@ import React, {Component, Fragment  } from "react";
 class Todolist extends Component{
   constructor(props){
     super(props);
+    this.state = {
+      input:'',
+      list:[]
+    }
   }
+  
   render() {
     return (
       <Fragment>
