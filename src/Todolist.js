@@ -12,13 +12,15 @@ class Todolist extends Component{
   render() {
     return (
       <Fragment>
-      <div><input value={this.state.input}/>
-      <button>Submit</button></div>
-      <ul>
-        <li>Learning React</li>
-        <li>Work Out</li>
-        <li>Finish Project</li>
-      </ul>
+      <div>
+        <input value={this.state.input} onChange={this.handleInputChange}
+        />
+        <button>Submit</button></div>
+        <ul>
+          <li>Learning React</li>
+          <li>Work Out</li>
+          <li>Finish Project</li>
+        </ul>
       </Fragment>
     )
   }
