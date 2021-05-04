@@ -23,7 +23,7 @@ class Todolist extends Component{
           onChange={this.handleInputChange.bind(this)}
           placeholder='Enter Your Event'
         />
-        <button>Submit</button></div>
+        <button onClick={}>Submit</button></div>
         <ul>
           <li>Learning React</li>
           <li>Work Out</li>
