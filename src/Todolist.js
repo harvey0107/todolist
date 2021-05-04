@@ -24,7 +24,7 @@ class Todolist extends Component{
 
   onItemDelete(){
     this.setState({
-      
+
     })
   }
 
@@ -40,7 +40,7 @@ class Todolist extends Component{
         <ul>
           {
             this.state.list.map((item, index) => {
-                return <li key={index} onClick={onItemDelete}>{item}</li>   
+                return <li key={index} onClick={this.onItemDelete}>{item}</li>   
             })
           }
         </ul>
