@@ -25,7 +25,6 @@ class Todolist extends Component{
   onItemDelete(index){
     const listCopy = [...this.state.list];
     listCopy.splice(index, 1, )
-    
     this.setState({ 
       list: listCopy
     })
@@ -43,7 +42,12 @@ class Todolist extends Component{
         <ul>
           {
             this.state.list.map((item, index) => {
-                return <li key={index} onClick={this.onItemDelete.bind(this)}>{item}</li>   
+                return (<li 
+                  key={index}
+                  dangerouslySetInnerHTML = {{__html:item}} 
+                  onClick={this.onItemDelete.bind(this)}>
+                    </li>
+                    )   
             })
           }
         </ul>
