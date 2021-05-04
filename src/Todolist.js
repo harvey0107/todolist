@@ -3,7 +3,7 @@ import React, {Component  } from "react";
 class Todolist extends Component{
   render() {
     return (
-      <div>Todolist</div>
+      <div><input/><button>Submit</button></div>
     )
   }
 }
