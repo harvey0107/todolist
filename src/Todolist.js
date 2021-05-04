@@ -15,6 +15,10 @@ class Todolist extends Component{
     })
   }
 
+  handButtonClick(event){
+    this.setState({})
+  }
+
   render() {
     return (
       <Fragment>
@@ -23,11 +27,13 @@ class Todolist extends Component{
           onChange={this.handleInputChange.bind(this)}
           placeholder='Enter Your Event'
         />
-        <button onClick={}>Submit</button></div>
+        <button onClick={this.handButtonClick.bind(this)}>Submit</button></div>
         <ul>
-          <li>Learning React</li>
-          <li>Work Out</li>
-          <li>Finish Project</li>
+          {
+            this.state.list.map((item, index) => {
+                <li>{item}</li>   
+            })
+          }
         </ul>
       </Fragment>
     )
