@@ -15,8 +15,11 @@ class Todolist extends Component{
     })
   }
 
-  handButtonClick(event){
-    this.setState({})
+  handButtonClick(){
+    this.setState({
+      list: [...this.state.list, this.state.input],
+      input: ''
+    })
   }
 
   render() {
@@ -31,7 +34,7 @@ class Todolist extends Component{
         <ul>
           {
             this.state.list.map((item, index) => {
-                <li>{item}</li>   
+                return <li key={index}>{item}</li>   
             })
           }
         </ul>
