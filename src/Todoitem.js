@@ -1,4 +1,4 @@
-import Reac, { Component } from "react";
+import React, { Component } from "react";
 
 class Todoitem extends Component{
     render(){
