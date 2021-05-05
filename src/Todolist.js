@@ -45,12 +45,15 @@ class Todolist extends Component{
         <ul>
           {
             this.state.list.map((item, index) => {
-                return (<li 
+                return (
+                  <div>
+                  <Todoitem />
+                  {/*<li 
                   key={index}
                   dangerouslySetInnerHTML = {{__html:item}} 
                   onClick={this.onItemDelete.bind(this)}>
-                    </li>
-                    )   
+                  </li>*/}
+                    </div>)   
             })
           }
         </ul>
