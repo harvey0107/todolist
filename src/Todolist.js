@@ -47,7 +47,7 @@ class Todolist extends Component{
             this.state.list.map((item, index) => {
                 return (
                   <div>
-                  <Todoitem content = {item}/>
+                  <Todoitem index = {index} content = {item}/>
                   {/*<li 
                   key={index}
                   dangerouslySetInnerHTML = {{__html:item}} 

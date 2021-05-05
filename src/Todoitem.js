@@ -2,7 +2,11 @@ import React, { Component } from "react";
 
 class Todoitem extends Component{
     render(){
-        return <div>{this.props.content}</div>
+        return <div onClick={this.handClick}>{this.props.content}</div>
+    }
+
+    handClick(){
+        alert(this.props.index)
     }
 }
 
