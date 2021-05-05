@@ -7,13 +7,13 @@ class Todoitem extends Component{
     }
     render(){
         return (
-        <div onClick={this.handClick}>
+        <div onClick={this.handleClick}>
             {this.props.content}
             </div>)
     }
 
     handleClick(){
-        this.props.onItemDelete(this.props.index)
+        this.props.delete(this.props.index)
     }
 }
 

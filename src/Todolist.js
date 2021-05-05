@@ -51,12 +51,7 @@ class Todolist extends Component{
                   delete = {this.onItemDelete.bind(this)} 
                   index = {index} 
                   content = {item}/>
-                  {/*<li 
-                  key={index}
-                  dangerouslySetInnerHTML = {{__html:item}} 
-                  onClick={this.onItemDelete.bind(this)}>
-                  </li>*/}
-                    </div>)   
+                  </div>)   
             })
           }
         </ul>
