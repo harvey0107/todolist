@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Todoitem extends Component{
     constructor(props){
         super(props);
-        this.handClick = this.handClick.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
     render(){
         return (
@@ -12,8 +12,8 @@ class Todoitem extends Component{
             </div>)
     }
 
-    handClick(){
-        alert(this.props.index);
+    handleClick(){
+        this.props.onItemDelete(this.props.index)
     }
 }
 
