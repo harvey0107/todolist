@@ -6,4 +6,4 @@ class Todoitem extends Component{
     }
 }
 
-export default Todoitem
+export default Todoitem;
