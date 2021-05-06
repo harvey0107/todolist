@@ -36,7 +36,8 @@ class Todolist extends Component{
       <Fragment>
       <div>
         <label htmlFor='insertPlace'>To Do List</label>
-        <input value={this.state.input} 
+        <input 
+          value={this.state.input} 
           id='insertPlace'
           onChange={this.handleInputChange.bind(this)}
           placeholder='Enter Your Event'
@@ -47,7 +48,7 @@ class Todolist extends Component{
             this.state.list.map((item, index) => {
                 return (
                   <div>
-                  <Todoitem 
+                  <Todoitem
                   delete = {this.onItemDelete.bind(this)} 
                   index = {index} 
                   content = {item}/>
