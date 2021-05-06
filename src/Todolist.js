@@ -10,6 +10,7 @@ class Todolist extends Component{
     }
     this.handButtonClick = this.handButtonClick.bind(this)
     this.handleInputChange = this.handleInputChange.bind(this)
+    this.onItemDelete = this.onItemDelete.bind(this)
   }
   
   handleInputChange(event){
@@ -51,7 +52,7 @@ class Todolist extends Component{
                 return (
                   <div>
                   <Todoitem
-                  delete = {this.onItemDelete.bind(this)} 
+                  delete = {this.onItemDelete} 
                   index = {index} 
                   content = {item}/>
                   </div>)   
