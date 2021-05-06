@@ -8,6 +8,8 @@ class Todolist extends Component{
       input:'',
       list:[]
     }
+    this.handButtonClick = this.handButtonClick.bind(this)
+    this.handleInputChange = this.handleInputChange.bind(this)
   }
   
   handleInputChange(event){
@@ -39,10 +41,10 @@ class Todolist extends Component{
         <input 
           value={this.state.input} 
           id='insertPlace'
-          onChange={this.handleInputChange.bind(this)}
+          onChange={this.handleInputChange}
           placeholder='Enter Your Event'
         />
-        <button onClick={this.handButtonClick.bind(this)}>Submit</button></div>
+        <button onClick={this.handButtonClick}>Submit</button></div>
         <ul>
           {
             this.state.list.map((item, index) => {
