@@ -50,12 +50,12 @@ class Todolist extends Component{
           {
             this.state.list.map((item, index) => {
                 return (
-                  <div>
                   <Todoitem
+                  key = {index}
                   delete = {this.onItemDelete} 
                   index = {index} 
                   content = {item}/>
-                  </div>)   
+                  )  
             })
           }
         </ul>
