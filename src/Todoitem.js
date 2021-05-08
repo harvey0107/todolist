@@ -19,4 +19,10 @@ class Todoitem extends Component{
     }
 }
 
+Todoitem.propTypes = {
+    content: PropTypes.string,
+    delete:PropTypes.func,
+    index:PropTypes.number
+}
+
 export default Todoitem;
