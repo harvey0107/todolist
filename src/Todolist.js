@@ -12,10 +12,7 @@ class Todolist extends Component{
     this.handleInputChange = this.handleInputChange.bind(this)
     this.onItemDelete = this.onItemDelete.bind(this)
   }
-  //在組件被掛載到頁面之前自動執行（第一執行）
-  componentWillMount(){ 
-    console.log('componentWillMount');
-  }
+ 
   
   handleInputChange(){
     const value = this.input.value;
@@ -40,7 +37,6 @@ class Todolist extends Component{
   }
 
   render() {
-    console.log('render');
     return (
       <Fragment>
       <div>
@@ -68,24 +64,6 @@ class Todolist extends Component{
         </ul>
       </Fragment>
     )
-  }
-  //在組件被掛載到頁面之後自動執行
-  componentDidMount(){
-    console.log('componentDidMount');
-  }
-  //在組建更新之前自動執行
-  shouldComponentUpdate(){
-    console.log('shouldComponentUpdate')
-    return true;
-  }
-  //在組建更新之前執行，但在shouldComponentUpdate後
-  //shouldComponentUpdate返回true執行返回false不被執行
-  componentWillUpdate(){
-    console.log('componentWillUpdate')
-  }
-  //在組建更新之後自動執行
-  componentDidUpdate(){
-    console.log('componentDidUpdate')
   }
 }
 export default Todolist;

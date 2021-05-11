@@ -7,6 +7,7 @@ class Todoitem extends Component{
         this.handleClick = this.handleClick.bind(this);
     }
     render(){
+        console.log('child render')
         const {content, note} = this.props;
         return (
         <div onClick={this.handleClick}>
@@ -17,6 +18,7 @@ class Todoitem extends Component{
     handleClick(){
         this.props.delete(this.props.index)
     }
+     
 }
 
 Todoitem.propTypes = {
