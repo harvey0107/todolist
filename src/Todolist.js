@@ -74,6 +74,10 @@ class Todolist extends Component{
   }
   shouldComponentUpdate(){
     console.log('shouldComponentUpdate')
+    return true;
+  }
+  componentWillUpdate(){
+    console.log('componentWillUpdate')
   }
 }
 export default Todolist;
