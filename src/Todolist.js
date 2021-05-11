@@ -12,6 +12,10 @@ class Todolist extends Component{
     this.handleInputChange = this.handleInputChange.bind(this)
     this.onItemDelete = this.onItemDelete.bind(this)
   }
+
+  componentWillMount(){ 
+    console.log('componentWillMount');
+  }
   
   handleInputChange(){
     const value = this.input.value;
@@ -36,6 +40,7 @@ class Todolist extends Component{
   }
 
   render() {
+    console.log('render');
     return (
       <Fragment>
       <div>
@@ -63,6 +68,12 @@ class Todolist extends Component{
         </ul>
       </Fragment>
     )
+  }
+  componentDidMount(){
+    console.log('componentDidMount');
+  }
+  shouldComponentUpdate(){
+    console.log('shouldComponentUpdate')
   }
 }
 export default Todolist;
