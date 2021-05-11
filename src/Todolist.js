@@ -13,10 +13,11 @@ class Todolist extends Component{
     this.onItemDelete = this.onItemDelete.bind(this)
   }
   
-  handleInputChange(event){
-    this.setState({
-      input: event.target.value
-    })
+  handleInputChange(){
+    const value = this.input.value;
+    this.setState(() => ({
+      input: value
+    }));
   }
 
   handButtonClick(){
@@ -44,6 +45,7 @@ class Todolist extends Component{
           id='insertPlace'
           onChange={this.handleInputChange}
           placeholder='Enter Your Event'
+          ref={(input) => {this.input = input}}
         />
         <button onClick={this.handButtonClick}>Submit</button></div>
         <ul>
