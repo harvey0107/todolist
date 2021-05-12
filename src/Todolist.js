@@ -1,5 +1,6 @@
 import React, { Component, Fragment  } from "react";
 import Todoitem from './Todoitem';
+import axios from 'axios'
 
 class Todolist extends Component{
   constructor(props){
@@ -65,7 +66,9 @@ class Todolist extends Component{
     )
   }
   componentDidMount(){
-    
+    axios.get('/api/todolist')
+    .then(()=>{alert('succ')})
+    .catch(()=>{alert('error')})
   }
 }
 export default Todolist;
