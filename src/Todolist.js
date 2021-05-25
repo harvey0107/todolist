@@ -1,6 +1,7 @@
 import React, { Component, Fragment  } from "react";
-import Todoitem from './Todoitem';
 import axios from 'axios'
+import Todoitem from './Todoitem';
+
 
 class Todolist extends Component{
   constructor(props){
@@ -41,7 +42,7 @@ class Todolist extends Component{
     return (
       <Fragment>
       <div>
-        <label htmlFor='insertPlace'>To Do List</label>
+        <label htmlFor='insertPlace'>My To Do List</label>
         <input 
           value={this.state.input} 
           id='insertPlace'
@@ -65,9 +66,16 @@ class Todolist extends Component{
       </Fragment>
     )
   }
-  componentDidMount(){
-    axios.get('/api/todolist')
-    .then(()=>{alert('succ')})
+  componentDidMount() {
+  axios.get('/api/todolist2')
+    .then((res)=>{
+      console.log(res.data);
+      this.setState(()=>{
+        return {
+          list:res.data
+        }
+      });
+    })
     .catch(()=>{alert('error')})
   }
 }
